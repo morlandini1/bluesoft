@@ -40,3 +40,45 @@ O trabalho foi desenvolvido como parte da disciplina de **Padrões Web para No C
 ├── README.md           # Documentação do projeto
 └── assets/
     └── icone.png       # Favicon e Logo da empresa
+
+    ⚙️ Como Configurar e Rodar
+1. Clonar ou Baixar
+Baixe os arquivos do projeto para uma pasta em seu computador.
+
+2. Configurar a Integração (Importante)
+Para que o formulário de contato funcione, é necessário configurar o Webhook no arquivo JavaScript.
+
+Abra o arquivo script.js.
+
+Localize a linha: const WEBHOOK_URL = 'https://hook.us2.make.com/mudnbspui5ol2x6ueyw1jjpe2sguujmw';
+
+Substitua o valor pelo seu link de Webhook gerado no Make.com.
+
+3. Executar o Projeto
+Basta abrir o arquivo index.html em qualquer navegador moderno (Chrome, Edge, Firefox).
+
+Dica: Para visualizar o Favicon corretamente, recomenda-se abrir o projeto através de um servidor local (como a extensão "Live Server" do VS Code) ou hospedar em serviços como GitHub Pages ou Vercel.
+
+🧩 Detalhes da Integração (Make.com)
+O fluxo de dados segue o seguinte caminho:
+
+Gatilho (Trigger): O JavaScript intercepta o submit do formulário e envia um JSON via POST para o Webhook do Make.
+
+Ação 1 (Google Sheets): O Make recebe os dados (nome, email, empresa, mensagem) e adiciona uma nova linha na planilha "Leads BlueSoft".
+
+Ação 2 (Gmail/Email): O Make dispara um e-mail de agradecimento para o endereço fornecido pelo usuário.
+
+🎨 Decisões de Design (Justificativa)
+Minimalismo: O uso excessivo de elementos foi evitado para focar na conversão (Botão "Solicitar Orçamento").
+
+Paleta de Cores:
+
+--primary-blue (#0044cc): Transmite confiança e tecnologia.
+
+--secondary-blue (#f0f4ff): Usado para quebrar a monotonia do fundo branco e separar seções visualmente.
+
+Tipografia: A fonte Inter foi escolhida por sua excelente legibilidade em telas digitais.
+
+Autor
+Desenvolvido por Marcio Orlandini para a entrega da atividade acadêmica da UniFECAF.
+
